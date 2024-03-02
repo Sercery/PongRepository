@@ -225,12 +225,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1199381436}
   - component: {fileID: 1199381435}
-  - component: {fileID: 1199381434}
   - component: {fileID: 1199381433}
   - component: {fileID: 1199381432}
+  - component: {fileID: 1199381437}
   m_Layer: 0
   m_Name: RightPaddle
-  m_TagString: Untagged
+  m_TagString: RPaddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,22 +307,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1199381434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199381431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd052016b7a39e145a76fe34e292aa88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  yBorder: 4.5
-  rb2dRP: {fileID: 0}
-  rb2dLP: {fileID: 0}
 --- !u!212 &1199381435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -384,12 +368,28 @@ Transform:
   m_GameObject: {fileID: 1199381431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5483, y: 1.0382, z: 0}
+  m_LocalPosition: {x: 9.5, y: 0, z: 0}
   m_LocalScale: {x: 0.9050579, y: 3.9148946, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1199381437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199381431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd052016b7a39e145a76fe34e292aa88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  yBorder: 4.5
+  rb2dRP: {fileID: 1199381432}
+  rb2dLP: {fileID: 1892985905}
 --- !u!1 &1589445293
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,8 +456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 970a192c00598b14ebd7d69ea8d3a3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 0.5
-  ySpeed: 0.5
+  xSpeed: 0.00125
+  ySpeed: 0.00125
 --- !u!212 &1589445296
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -535,12 +535,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1892985908}
   - component: {fileID: 1892985907}
-  - component: {fileID: 1892985906}
   - component: {fileID: 1892985905}
   - component: {fileID: 1892985904}
+  - component: {fileID: 1892985909}
   m_Layer: 0
   m_Name: LeftPaddle
-  m_TagString: Untagged
+  m_TagString: LPaddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -617,22 +617,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &1892985906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892985903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd052016b7a39e145a76fe34e292aa88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  yBorder: 4.5
-  rb2dRP: {fileID: 0}
-  rb2dLP: {fileID: 0}
 --- !u!212 &1892985907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -694,12 +678,28 @@ Transform:
   m_GameObject: {fileID: 1892985903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5483, y: 1.0382, z: 0}
+  m_LocalPosition: {x: -9.5, y: 0, z: 0}
   m_LocalScale: {x: 0.9050579, y: 3.9148946, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892985909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892985903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd052016b7a39e145a76fe34e292aa88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  yBorder: 4.5
+  rb2dRP: {fileID: 1199381432}
+  rb2dLP: {fileID: 1892985905}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
